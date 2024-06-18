@@ -62,7 +62,7 @@
             <a href="#" class="button_text text black">Войти</a>
         </div>
         <!--QR_CODE-->
-        <div class="container_div_button black">
+        <div class="container_div_button black" id="qr">
             <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
             <a href="#" class="button_text qr_code text white">Сканировать QR</a>
         </div>
@@ -72,15 +72,30 @@
 <main class="main">
     <!--SECTION FOR USP-->
     <section class="main_section_usp">
-        <!--<div class="usp_div_left">
+        <div class="usp_div_left">
             <div class="usp_text_frame">
                 <h1 class="h1_usp">ПОИСК МЕСТА И бронирование В 2 КЛИКА</h1>
                 <p class="usp_p_content">Приложение для парковок, созданное чтобы облегчить и ускорить процесс паркинга</p>
             </div>
             <div class="usp_button_frame">
-
+                <div class="download_button"></div>
+                <div class="download_dropdown"></div>
             </div>
-        </div>-->
+        </div>
+        <div class="usp_div_right">
+            <div class="iphone image_container">
+                <img class="iphone image" src="assets/iphone.svg" alt="Демонстрация" />
+            </div>
+            <div class="order_card image_container">
+                <img class="order_card image" src="assets/order-card.svg" alt="Карточка" />
+            </div>
+            <div class="card_group image_container">
+                <img class="card_group image" src="assets/card-group.svg" alt="Способы оплаты" />
+            </div>
+            <div class="panel image_container">
+                <img class="panel image" src="assets/panel.svg" alt="Панель" />
+            </div>
+        </div>
     </section>
     <!--SECTION FOR SERVICE-->
     <section class="main_section_service">
@@ -120,6 +135,19 @@
 
 </footer>
 <script defer>
+    /*SCROLL*/
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    /*CHANGE LANGUAGE*/
     const languageContainer = document.querySelector('.language_container');
     const languageDropdown = document.querySelector('.language_dropdown');
     const languageDropdownItems = document.querySelectorAll('.language_dropdown_item');
@@ -146,7 +174,7 @@
         });
     });
 
-    // Получаем элементы
+    /*BURGER MENU*/
     const burgerMenu = document.querySelector('.burger_menu');
     const headerNav = document.querySelector('.header_nav');
 
@@ -157,17 +185,19 @@
         headerNav.classList.toggle('open');
     });
 
-    const qrBlack = document.querySelector('.qr_code_mobile');
+    /*QR-CODE*/
+    const qrButton = document.querySelector('#qr'),
+          qrBlack = document.querySelector('.qr_code_mobile');
 
-    qrBlack.addEventListener('mouseover', () => {
+    qrButton.addEventListener('mouseover', () => {
         qrBlack.src = '../assets/qr-black.svg';
     });
 
-    qrBlack.addEventListener('mouseout', () => {
+    qrButton.addEventListener('mouseout', () => {
         qrBlack.src = '../assets/qr.svg';
     });
 
-    qrBlack.addEventListener('click', () => {
+    qrButton.addEventListener('click', () => {
         qrBlack.src = '../assets/qr-gray.svg';
     });
 </script>
