@@ -653,7 +653,7 @@ h1.h1_usp {
 
 @media(max-width: 1280px) {
     .main_section_usp {
-        width: 1000px;
+        width: calc(100vw - 50px);
     }
 
     .usp_div_left {
@@ -662,11 +662,12 @@ h1.h1_usp {
     }
 
     .usp_div_right {
-        max-width: 240px;
-        width: auto;
+        max-width: 600px;
+        width: fit-content;
         position: absolute;
         top: 50%;
-        left: calc(100vw - 510px);
+        right: 0;
+        /* left: calc(100vw - 500px); */
         transform: translate(0%, -65%);
         scale: 0.8;
     }
@@ -676,7 +677,7 @@ h1.h1_usp {
     }
 }
 
-@media(max-width: 980px) {
+@media(max-width: 1000px) {
     h1.h1_usp {
         font-size:var(--font-size-56);
     }
@@ -706,20 +707,16 @@ h1.h1_usp {
     }
 
     .usp_div_right {
-        max-width: 240px;
-        width: auto;
-        position: absolute;
-        top: 0;
-        left: calc(100vw - 425px);
+        top: 25px;
+        left: calc(100vw - 535px);
         transform: translate(0%, 0%);
         scale: 0.6;
     }
 
     .iphone.image_container {
-        margin-left: 50px;
-
         grid-row: 1 / 6;
-        grid-column: 3 / 7;
+        grid-column: 1 / 7;
+        margin: 0;
 
         z-index: 1;
     }
@@ -841,7 +838,7 @@ h1.h1_usp {
     .usp_div_right {
         position: relative;
         grid-column: 1 / 7;
-        width: calc(100vw - 20px);
+        width: calc(100vw - 40px);
         grid-template-columns: 20px repeat(4, 1fr);
         grid-template-rows: 20px repeat(3, auto);
         grid-auto-rows: minmax(20px, auto);
