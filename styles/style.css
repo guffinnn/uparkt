@@ -161,6 +161,9 @@ main {
     position: relative;
     width: 24px;
     height: 16px;
+
+    filter: drop-shadow(0px 1px 12px rgba(0, 0, 0, 0.06)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.06)) drop-shadow(0px -8px 34px rgba(0, 0, 0, 0.03));
+    border-radius: 4px;
 }
 
 .language_image {
@@ -223,8 +226,8 @@ main {
     gap: 10px;
 
     position: relative;
-    width: 100%;
-    min-width: fit-content;
+    width: auto;
+    min-width: 152px;
     height: 40px;
 
     border-radius: 100px;
@@ -239,12 +242,18 @@ main {
 }
 
 .container_div_button.black {
+    min-width: 184px;
+
     background: var(--black);
     border: 1px solid var(--black);
 }
 
 .text.white {
     color: var(--white);
+}
+
+.qr_code_mobile {
+    display: none;
 }
 
 .qr_code:before {
@@ -257,10 +266,6 @@ main {
     left: 0;
 
     transition: all 0.45s ease-in-out;
-}
-
-.qr_code_mobile {
-    display: none;
 }
 
 a.li_a_link.text {
@@ -428,11 +433,13 @@ a.li_a_link.text:hover {
     header.header {
         display: grid;
         width: 100vw;
-        height: 56px; /* Высота по умолчанию */
+        height: 56px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 24px repeat(3, 1fr);
         align-content: space-between;
         padding: 16px 20px;
+
+        transition: height 0.45s ease-in-out;
     }
 
     /* Стили для header при отмеченном бургере */
@@ -489,12 +496,13 @@ a.li_a_link.text:hover {
 
     .header_nav {
         width: 100%;
-        transform: translateX(-100vw);
-        z-index: 5;
+        opacity: 0;
+        scale: 0;
+        transform: translateY(-100vh);
 
         background-color: rgba(255, 255, 255, 0);
 
-        transition: all 0.4s ease-in-out;
+        transition: all 0.45s ease-in-out;
     }
 
     .burger-menu {
@@ -502,7 +510,9 @@ a.li_a_link.text:hover {
     }
 
     .burger-checkbox:checked ~ .header_nav {
-        transform: translateX(0);
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
     }
 }
 
@@ -1024,8 +1034,21 @@ video.video_content {
         gap: 10px;
     }
 
+    .container_div_button.black {
+        min-width: fit-content;
+    }
+
     .qr_code:before {
         top: -1px;
+    }
+
+    .button_text.white {
+        display: none;
+        width: 0;
+    }
+
+    .qr_code_mobile {
+        display: block;
     }
 
     .text {
@@ -1113,7 +1136,7 @@ video.video_content {
     .container_div_button {
         width: fit-content;
         padding: 8px 16px;
-        min-width: fit-content;
+        min-width: 152px;
         gap: 0;
     }
 
@@ -1128,10 +1151,6 @@ video.video_content {
 
     a.qr_code:before {
         top: -1px;
-    }
-
-    .qr_code_mobile {
-        display: none;
     }
 
     .main_section_usp {
@@ -1199,10 +1218,22 @@ video.video_content {
 }
 
 @media(max-width: 768px) {
-    /*TODO: DELETE*/
-    /*header.header {
+    .container_div_button.black {
+        min-width: 184px;
+    }
+
+    .button_text.white {
+        display: block;
+        width: fit-content;
+    }
+
+    a.qr_code:before {
+        top: -1px;
+    }
+
+    .qr_code_mobile {
         display: none;
-    }*/
+    }
 
     .main_section_usp {
         min-width: 560px;
