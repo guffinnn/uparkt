@@ -36,36 +36,38 @@
             <li class="ul_li">
                 <a href="#faq" class="li_a_link text">FAQ</a>
             </li>
-        </ul>
-    </nav>
-    <!--BUTTONS-->
-    <div class="header_div_container">
-        <div class="language_container">
-            <div class="language_content">
-                <span class="language_text text black">РУС</span>
-                <div class="language_div_image">
-                    <img class="language_image" src="assets/ru.png" alt="РУС" />
-                </div>
-            </div>
-            <div class="language_dropdown">
-                <div class="language_dropdown_item" data_lang="en">
-                    <span class="language_text text black">ENG</span>
-                    <div class="language_div_image">
-                        <img class="language_image" src="assets/en.png" alt="ENG" />
+            <li class="ul_li" id="buttons">
+                <!--BUTTONS-->
+                <div class="header_div_container">
+                    <div class="language_container">
+                        <div class="language_content">
+                            <span class="language_text text black">РУС</span>
+                            <div class="language_div_image">
+                                <img class="language_image" src="assets/ru.png" alt="РУС" />
+                            </div>
+                        </div>
+                        <div class="language_dropdown">
+                            <div class="language_dropdown_item" data_lang="en">
+                                <span class="language_text text black">ENG</span>
+                                <div class="language_div_image">
+                                    <img class="language_image" src="assets/en.png" alt="ENG" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--LOG IN-->
+                    <div class="container_div_button white">
+                        <a href="#" class="button_text text black">Войти</a>
+                    </div>
+                    <!--QR_CODE-->
+                    <div class="container_div_button black" id="qr">
+                        <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
+                        <a href="#" class="button_text qr_code text white">Сканировать QR</a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!--LOG IN-->
-        <div class="container_div_button white">
-            <a href="#" class="button_text text black">Войти</a>
-        </div>
-        <!--QR_CODE-->
-        <div class="container_div_button black" id="qr">
-            <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
-            <a href="#" class="button_text qr_code text white">Сканировать QR</a>
-        </div>
-    </div>
+            </li>
+        </ul>
+    </nav>
 </header>
 <!--MAIN-->
 <main class="main">
@@ -111,50 +113,123 @@
     </section>
     <!--SECTION FOR ADVANTAGES-->
     <section class="main_section_advantages" id="advantages">
-
+        <div class="div_service_name --start">
+            <p class="p_service">Преимущества</p>
+        </div>
+        <!--FRAMES CONTAINER-->
+        <div class="main-section_container">
+            <!--FRAME FOR COMFORTABLE-->
+            <div class="main-section active" id="active">
+                <article class="description">
+                    <h3 class="description_head">Удобство</h3>
+                    <p class="description_content">Легко и быстро забронировать парковочное место удаленно: с помощью мобильного телефона</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                    >
+                        <source src="assets/anim1.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <!--FRAME FOR ECONOMY-->
+            <div class="main-section">
+                <article class="description">
+                    <h3 class="description_head">Экономия времени и  денег</h3>
+                    <p class="description_content">Оплачивайте парковку через приложение и контролируйте статус в одном месте</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                    >
+                        <source src="assets/anim2.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <!--FRAME FOR GARANTIES-->
+            <div class="main-section">
+                <article class="description">
+                    <h3 class="description_head">Гарантия</h3>
+                    <p class="description_content">Наличие парковочного места там, где его забронировали, возврат средств согласно условиям бронирования</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                    >
+                        <source src="assets/anim3.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <!--FRAME FOR CHOOSE-->
+            <div class="main-section">
+                <article class="description">
+                    <h3 class="description_head">Большой выбор</h3>
+                    <p class="description_content">Бронируйте места на основе своих предпочтений: типа парковки, расположение, доступность, и даже способа оплаты</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                    >
+                        <source src="assets/anim4.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <!--FRAME FOR SECURITY-->
+            <div class="main-section" id="last">
+                <article class="description">
+                    <h3 class="description_head">Безопасность</h3>
+                    <p class="description_content">Пользователи приложения могут выбирать парковки среди рекомендованных партнеров, где доступен широкий выбор мер безопасности</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                    >
+                        <source src="assets/anim5.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+        </div>
     </section>
     <!--SECTION FOR OWNERS-->
-    <section class="main_section_owners">
-
+    <section class="main_section_owners" id="owners">
+        
     </section>
     <!--SECTION FOR LOCATION-->
     <section class="main_section_location" id="location">
-
+        
     </section>
     <!--SECTION FOR SPONSORS-->
-    <section class="main_section_sponsors">
-
+    <section class="main_section_sponsors" id="sponsors">
+        
     </section>
     <!--SECTION FOR FORM-->
-    <section class="main_section_form">
-
+    <section class="main_section_form" id="form">
+        
     </section>
     <!--SECTION FOR FAQ-->
     <section class="main_section_faq" id="faq">
-
+        
     </section>
     <!--SECTION FOR DOWNLOAD-->
-    <section class="main_section_download">
-
+    <section class="main_section_download" data-section-id="download">
+        
     </section>
 </main>
 <!--FOOTER-->
 <footer class="footer">
 
 </footer>
-<script defer>
-    /*SCROLL*/
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        const scrollPosition = window.scrollY;
-
-        if (scrollPosition > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
+<script>
     /*CHANGE LANGUAGE*/
     const languageContainer = document.querySelector('.language_container');
     const languageDropdown = document.querySelector('.language_dropdown');
@@ -183,12 +258,10 @@
     });
 
     /*BURGER MENU*/
-    const burgerMenu = document.querySelector('.burger_menu');
-    const headerNav = document.querySelector('.header_nav');
+    const burgerMenu = document.querySelector('#burger-checkbox'),
+          headerNav = document.querySelector('header.header');
 
-    // Добавляем обработчик события нажатия на кнопку
     burgerMenu.addEventListener('click', () => {
-        // Переключаем классы для открытия/закрытия меню
         burgerMenu.classList.toggle('open');
         headerNav.classList.toggle('open');
     });
@@ -207,6 +280,49 @@
 
     qrButton.addEventListener('click', () => {
         qrBlack.src = '../assets/qr-gray.svg';
+    });
+
+    /*PARALLAX*/
+    const mainSections = document.querySelectorAll('.main-section');
+
+    function isElementVisible(element) {
+        const rect = element.getBoundingClientRect();
+        const activeElement = document.getElementById('active');
+        const activeRect = activeElement.getBoundingClientRect();
+
+        // Проверяем, находится ли верхняя граница элемента в том же положении, что и у элемента с id "active"
+        return rect.top === activeRect.top &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+    }
+
+    function handleScroll() {
+        mainSections.forEach((section, index) => {
+            if (isElementVisible(section)) {
+                section.classList.add('active');
+                if (index > 0) {
+                    mainSections[index - 1].classList.add('disabled');
+                }
+            } else {
+                section.classList.remove('active');
+                if (index > 0) {
+                    mainSections[index - 1].classList.remove('disabled');
+                }
+            }
+        });
+    }
+
+    /*SCROLL*/
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        handleScroll();
     });
 </script>
 </body>
