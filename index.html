@@ -125,7 +125,7 @@
     <section class="main_section_service">
         <div class="div_section_fluid">
             <div class="div_service_name">
-                <p class="p_service">сервис uparkt</p>
+                <p class="p_service">Сервис uparkt</p>
             </div>
             <h2 class="service_h2">Удобство, надежность и экономия времени —  гарантируем вам каждый раз, когда вы пользуетесь нашим приложением</h2>
         </div>
@@ -221,7 +221,53 @@
     </section>
     <!--SECTION FOR OWNERS-->
     <section class="main_section_owners" id="owners">
-        
+        <div class="div_section_fluid">
+            <div class="div_service_name">
+                <p class="p_service">Владельцам парковок</p>
+            </div>
+            <div class="owners_content">
+                <h2 class="service_h2">Добавляйте парковки и зарабатывайте вместе с Uparkt</h2>
+            </div>
+            <!--ADVANTAGE 1-->
+            <div class="advantage" id="adv1">
+                <!--IMAGE CONTAINER-->
+                <div class="advantage_image"></div>
+                <div class="advantage_content">
+                    <h4 class="h4_heading">Зарабатывайте</h4>
+                    <span class="advantage_description">Сдавайте парковки в аренду в мобильном приложении</span>
+                </div>
+            </div>
+            <!--ADVANTAGE 2-->
+            <div class="advantage" id="adv2">
+                <!--IMAGE CONTAINER-->
+                <div class="advantage_image"></div>
+                <div class="advantage_content">
+                    <h4 class="h4_heading">Низкие комиссии
+                        <img src="assets/help-circle.svg" alt="" />
+                    </h4>
+                    <div class="popover">
+                        <p>Можете убедиться в этом сами - читать</p>
+                        <img src="assets/link-arrow.svg" alt="" />
+                    </div>
+                    <span class="advantage_description">Одни из самых низких комиссий, а вывести средства легче простого</span>
+                </div>
+            </div>
+            <!--ADVANTAGE 3-->
+            <div class="advantage" id="adv3">
+                <!--IMAGE CONTAINER-->
+                <div class="advantage_image"></div>
+                <div class="advantage_content">
+                    <h4 class="h4_heading">Поддержка</h4>
+                    <span class="advantage_description">Мы предлагаем удобную поддержку пользователей 24/7</span>
+                </div>
+            </div>
+            <!--BUTTON-->
+            <div class="dropdown_default">
+                <span class="dropdown_text">
+                    <a href="#">Скачать приложение</a>
+                </span>
+            </div>
+        </div>
     </section>
     <!--SECTION FOR LOCATION-->
     <section class="main_section_location" id="location">
@@ -248,109 +294,10 @@
 <footer class="footer">
 
 </footer>
-<script>
-    /*CHANGE LANGUAGE*/
-    const languageContainer = document.querySelector('.language_container');
-    const languageDropdown = document.querySelector('.language_dropdown');
-    const languageDropdownItems = document.querySelectorAll('.language_dropdown_item');
-    const languageContent = document.querySelector('.language_content');
-    const languageText = document.querySelector('.language_text');
-    const languageImage = document.querySelector('.language_image');
-
-    let currentLang = 'ru'; // Изначальный язык
-
-    languageContainer.addEventListener('click', () => {
-        languageDropdown.classList.toggle('open');
-        languageContainer.classList.toggle('open');
-    });
-
-    languageDropdownItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const selectedLang = item.getAttribute('data_lang');
-            // Если выбранный язык не совпадает с текущим, меняем язык
-            if (selectedLang !== currentLang) {
-                languageText.textContent = item.textContent;
-                languageImage.src = `assets/${selectedLang}.png`;
-                currentLang = selectedLang; // Обновляем текущий язык
-            }
-            languageDropdown.style.display = 'none';
-        });
-    });
-
-    /*BURGER MENU*/
-    const burgerMenu = document.querySelector('#burger-checkbox'),
-          headerNav = document.querySelector('header.header');
-
-    burgerMenu.addEventListener('click', () => {
-        burgerMenu.classList.toggle('open');
-        headerNav.classList.toggle('open');
-    });
-
-    /*BUTTON DROPDOWN*/
-    const dropdown = document.querySelector('div.dropdown_icon');
-
-    dropdown.addEventListener('click', () => {
-       dropdown.querySelector('.dropdown_icon.image').classList.toggle('open');
-    });
-
-    /*QR-CODE*/
-    const qrButton = document.querySelector('#qr'),
-          qrBlack = document.querySelector('.qr_code_mobile');
-
-    qrButton.addEventListener('mouseover', () => {
-        qrBlack.src = '../assets/qr-black.svg';
-    });
-
-    qrButton.addEventListener('mouseout', () => {
-        qrBlack.src = '../assets/qr.svg';
-    });
-
-    qrButton.addEventListener('click', () => {
-        qrBlack.src = '../assets/qr-gray.svg';
-    });
-
-    /*PARALLAX*/
-    const mainSections = document.querySelectorAll('.main-section');
-
-    function isElementVisible(element) {
-        const rect = element.getBoundingClientRect();
-        const activeElement = document.getElementById('active');
-        const activeRect = activeElement.getBoundingClientRect();
-
-        // Проверяем, находится ли верхняя граница элемента в том же положении, что и у элемента с id "active"
-        return rect.top === activeRect.top &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
-    }
-
-    function handleScroll() {
-        mainSections.forEach((section, index) => {
-            if (isElementVisible(section)) {
-                section.classList.add('active');
-                if (index > 0) {
-                    mainSections[index - 1].classList.add('disabled');
-                }
-            } else {
-                section.classList.remove('active');
-                if (index > 0) {
-                    mainSections[index - 1].classList.remove('disabled');
-                }
-            }
-        });
-    }
-
-    /*SCROLL*/
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        const scrollPosition = window.scrollY;
-
-        if (scrollPosition > 0) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-
-        handleScroll();
-    });
-</script>
+<!--JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="scripts/jquery.js.js"></script>
+<!--SCRIPT-->
+<script src="scripts/script.js"></script>
 </body>
 </html>
