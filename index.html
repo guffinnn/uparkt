@@ -82,10 +82,29 @@
                 </h1>
                 <p class="usp_p_content">Приложение для парковок, созданное чтобы облегчить и ускорить процесс паркинга</p>
             </div>
-            <div class="usp_button_frame">
-                <div class="download_button"></div>
-                <div class="download_dropdown"></div>
-            </div>
+            <!--BUTTON DROPDOWN-->
+            <label class="dropdown">
+                <div class="dd-button">
+                    <div class="dropdown_default ios">
+                        <span class="dropdown_text ios">
+                            <a href="#">Скачать для iOS</a>
+                        </span>
+                    </div>
+                    <div class="dropdown_icon">
+                        <img class="dropdown_icon image" src="assets/dropdown-icon.svg" alt="Подробнее" />
+                    </div>
+                </div>
+                <input type="checkbox" class="dd-input" id="test">
+                <ul class="dd-menu">
+                    <li>
+                        <div class="dropdown_default android">
+                            <span class="dropdown_text android">
+                                <a href="#">Скачать для Android</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </label>
         </div>
         <div class="usp_div_right">
             <div class="iphone image_container">
@@ -241,7 +260,8 @@
     let currentLang = 'ru'; // Изначальный язык
 
     languageContainer.addEventListener('click', () => {
-        languageDropdown.style.display = languageDropdown.style.display === 'block' ? 'none' : 'block';
+        languageDropdown.classList.toggle('open');
+        languageContainer.classList.toggle('open');
     });
 
     languageDropdownItems.forEach(item => {
@@ -264,6 +284,13 @@
     burgerMenu.addEventListener('click', () => {
         burgerMenu.classList.toggle('open');
         headerNav.classList.toggle('open');
+    });
+
+    /*BUTTON DROPDOWN*/
+    const dropdown = document.querySelector('div.dropdown_icon');
+
+    dropdown.addEventListener('click', () => {
+       dropdown.querySelector('.dropdown_icon.image').classList.toggle('open');
     });
 
     /*QR-CODE*/
