@@ -18,6 +18,7 @@ header.header {
     align-items: center;
     gap: 24px;
 
+    -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
     transition: background-color 0.45s ease-in-out;
 }
@@ -439,7 +440,10 @@ a.li_a_link.text:hover {
         align-content: space-between;
         padding: 16px 20px;
 
-        transition: height 0.45s ease-in-out;
+        -webkit-backdrop-filter: blur(24px);
+        backdrop-filter: blur(24px);
+
+        transition: all 0.45s ease-in-out;
     }
 
     /* Стили для header при отмеченном бургере */
@@ -1410,8 +1414,31 @@ video.video_content {
         margin-bottom: -60px;
     }
 
+    .image {
+        opacity: 0;
+        image-rendering: -webkit-crisp-edges;
+    }
+
     .iphone.image_container {
         grid-column: 1 / 7;
+
+        background: url(../assets/iphone.svg) no-repeat center center;
+        background-size: contain;
+    }
+
+    .order_card.image_container {
+        background: url(../assets/order-card.svg) no-repeat center center;
+        background-size: contain;
+    }
+
+    .card_group.image_container {
+        background: url(../assets/card-group.svg) no-repeat center center;
+        background-size: contain;
+    }
+
+    .panel.image_container {
+        background: url(../assets/panel.svg) no-repeat center center;
+        background-size: contain;
     }
 
     .order_card.image_container,

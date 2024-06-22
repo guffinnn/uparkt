@@ -63,6 +63,25 @@
     --pure-violet: #F6EFFF;
 }
 
+/*ANCHOR LINKS*/
+html {
+    scroll-behavior: smooth;
+}
+
+:target {
+    animation-duration: 1s;
+    animation-name: scroll;
+}
+
+@keyframes scroll {
+    from {
+        margin-top: -100px; /* Расстояние от верхнего края экрана до якоря */
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
 /*ALL*/
 * {
     margin: 0;
