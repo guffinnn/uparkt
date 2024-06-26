@@ -47,6 +47,12 @@
                             </div>
                         </div>
                         <div class="language_dropdown">
+                            <div class="language_dropdown_item" data_lang="ru">
+                                <span class="language_text text black">РУС</span>
+                                <div class="language_div_image">
+                                    <img class="language_image" src="assets/ru.png" alt="РУС" />
+                                </div>
+                            </div>
                             <div class="language_dropdown_item" data_lang="en">
                                 <span class="language_text text black">ENG</span>
                                 <div class="language_div_image">
@@ -355,7 +361,7 @@
             <!--FORM-->
             <div class="form_container">
                 <span class="location_description">Наш менеджер свяжется с вами, чтобы обсудить наилучшие условия для Вас или вашей компании.</span>
-                <form action="scripts/sendMessage.php" method="post">
+                <form action="sendMessage.php" method="post">
                     <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
                     <input type="email" name="email" placeholder="Ваша почта" required>
                     <input type="text" name="subject" placeholder="Ваша тема" required>
