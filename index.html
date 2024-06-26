@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,8 +116,8 @@
             <div class="card_group image_container">
                 <img class="card_group image" src="assets/card-group.svg" alt="Способы оплаты" />
             </div>
-            <div class="panel image_container">
-                <img class="panel image" src="assets/panel.svg" alt="Панель" />
+            <div class="panelL image_container">
+                <img class="panelL image" src="assets/panel.svg" alt="Панель" />
             </div>
         </div>
     </section>
@@ -148,6 +148,7 @@
                            autoplay="autoplay"
                            loop="loop"
                            preload="auto"
+                           muted="muted"
                     >
                         <source src="assets/anim1.mp4" type="video/mp4">
                     </video>
@@ -164,6 +165,7 @@
                            autoplay="autoplay"
                            loop="loop"
                            preload="auto"
+                           muted="muted"
                     >
                         <source src="assets/anim2.mp4" type="video/mp4">
                     </video>
@@ -180,6 +182,7 @@
                            autoplay="autoplay"
                            loop="loop"
                            preload="auto"
+                           muted="muted"
                     >
                         <source src="assets/anim3.mp4" type="video/mp4">
                     </video>
@@ -196,6 +199,7 @@
                            autoplay="autoplay"
                            loop="loop"
                            preload="auto"
+                           muted="muted"
                     >
                         <source src="assets/anim4.mp4" type="video/mp4">
                     </video>
@@ -212,6 +216,7 @@
                            autoplay="autoplay"
                            loop="loop"
                            preload="auto"
+                           muted="muted"
                     >
                         <source src="assets/anim5.mp4" type="video/mp4">
                     </video>
@@ -305,15 +310,98 @@
     </section>
     <!--SECTION FOR SPONSORS-->
     <section class="main_section_sponsors" id="sponsors">
-        <div class="div_section_fluid"></div>
+        <div class="div_section_fluid">
+            <div class="div_service_name" id="service_spnsrs">
+                <p class="p_service">Нам доверяют</p>
+            </div>
+            <div class="sponsors_content">
+                <h2 class="service_h2">Уже более десяти компаний успешно интегрировали наше приложение на своих сайтах и платформах</h2>
+            </div>
+            <div class="sponsors_frame">
+                <!--SPONSOR CARDS-->
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr1"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr2"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr3"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr4"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr5"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr6"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr7"></div>
+                </div>
+                <div class="sponsor_card">
+                    <div class="sponsor_image" id="spnsr8"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--SECTION FOR FORM-->
     <section class="main_section_form" id="form">
-        
+        <div class="div_section_fluid">
+            <div class="form_content">
+                <h2 class="service_h2">Оставьте заявку и паркуйтесь быстрее</h2>
+            </div>
+            <!--FORM-->
+            <div class="form_container">
+                <span class="location_description">Наш менеджер свяжется с вами, чтобы обсудить наилучшие условия для Вас или вашей компании.</span>
+                <form action="scripts/sendMessage.php" method="post">
+                    <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+                    <input type="email" name="email" placeholder="Ваша почта" required>
+                    <input type="text" name="subject" placeholder="Ваша тема" required>
+                    <input type="text" name="message" placeholder="Ваше сообщение" required>
+                    <button type="submit" class="dropdown_default black">Отправить</button>
+                </form>
+            </div>
+        </div>
     </section>
     <!--SECTION FOR FAQ-->
     <section class="main_section_faq" id="faq">
-        
+        <div class="div_section_fluid">
+            <div class="div_service_name">
+                <p class="p_service">FAQ</p>
+            </div>
+            <div class="owners_content faq">
+                <h2 class="service_h2">Ответы на часто задаваемые вопросы</h2>
+            </div>
+            <!--ACCORDION-->
+            <div class="accordion_frame">
+                <div class="accordion-container">
+                    <button class="accordion">Какие платежи или комиссии в нашем приложении?</button>
+                    <div class="panel">
+                        <p>Для пользователей приложение бесплатно, а владельцы парковочных мест оплачивают минимальную комиссию в размере 8% после завершения резервации (см. «Пользовательское Соглашение»)</p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <button class="accordion">Как Uparkt облегчает процесс поиска и бронирования?</button>
+                    <div class="panel">
+                        <p>Мы используем передовые технологии, чтобы обеспечить быстрое и точное бронирование.</p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <button class="accordion">Как связаться с поддержкой?</button>
+                    <div class="panel">
+                        <p>В каждой резервации или личном кабинете есть возможность быстро связаться со службой поддержки.</p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <button class="accordion">В каких городах и странах работает Uparkt?</button>
+                    <div class="panel">
+                        <p>Приложение доступно на всей территории России, а также частично в Беларуси, Австрии и Венгрии.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--SECTION FOR DOWNLOAD-->
     <section class="main_section_download" data-section-id="download">
@@ -327,7 +415,12 @@
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="scripts/jquery.js.js"></script>
-<!--SCRIPT-->
-<script src="scripts/script.js"></script>
+<!--SCRIPTS-->
+<script defer src="scripts/script.js"></script>
+<script defer src="scripts/scroll.js"></script>
+<script defer src="scripts/qr.js"></script>
+<script defer src="scripts/popover.js"></script>
+<script defer src="scripts/video.js"></script>
+<script defer src="scripts/accordion.js"></script>
 </body>
 </html>

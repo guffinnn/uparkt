@@ -20,7 +20,7 @@
 /*BASICS*/
 :root {
     --black: #303030;
-    --white: #FFFFFF;
+    --white: rgb(255, 255, 255);
 }
 
 /*GRAY*/
