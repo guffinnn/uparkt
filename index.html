@@ -62,9 +62,9 @@
                         </div>
                     </div>
                     <!--LOG IN-->
-                    <div class="container_div_button white">
-                        <a href="#" class="button_text text black">Войти</a>
-                    </div>
+                    <a class="container_div_button white" href="https://admin.uparkt.ru/login">
+                        <span class="button_text text black">Войти</span>
+                    </a>
                     <!--QR_CODE-->
                     <div class="container_div_button black" id="qr">
                         <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
@@ -457,10 +457,10 @@
         <nav class="footer_nav">
             <ul class="nav_ul_list">
                 <li class="ul_li">
-                    <a href="" class="li_a_link text">Политика конфиденциальности</a>
+                    <a href="http://uparkt.online/" class="li_a_link text">Политика конфиденциальности</a>
                 </li>
                 <li class="ul_li">
-                    <a href="" class="li_a_link text">Пользовательское соглашение</a>
+                    <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing" class="li_a_link text">Пользовательское соглашение</a>
                 </li>
             </ul>
         </nav>
@@ -509,7 +509,7 @@
             <ul class="nav_ul_list" id="images">
                 <li class="ul_li">
                     <!--TELEGRAM LINK-->
-                    <a href="https://t.me/uparkt" class="li_a_link image">
+                    <a href="https://t.me/uparktrus" class="li_a_link image">
                         <img class="social_link" src="assets/tg.svg" alt="Telegram" />
                     </a>
                 </li>
@@ -518,18 +518,30 @@
     </div>
     <p class="promo_text">SEARCH, BOOK, PARKT</p>
     <!--HOST-->
-    <div class="container_div_button white">
-        <a href="#" class="button_text text black">Стать хостом</a>
-    </div>
+    <a class="container_div_button white" href="https://admin.uparkt.ru/login">
+        <span class="button_text text black">Стать хостом</span>
+    </a>
     <!--LOG IN-->
-    <div class="container_div_button black">
-        <a href="#" class="button_text text white">Войти</a>
-    </div>
+    <a class="container_div_button black" href="#">
+        <span class="button_text text white">Войти</span>
+    </a>
     <!--TO UP-->
     <a class="arrow_to_up" href="#usp">
         <img class="image" src="assets/arrow-to-header.svg" alt="Вверх" />
     </a>
 </footer>
+<!--MODAL WINDOW-->
+<div class="modal" id="myModal">
+    <div class="modal_text">
+        <p class="text_content">Скачайте приложение по QR-коду</p>
+        <span class="close">×</span>
+    </div>
+    <div class="modal_qr">
+        <img class="modal_image" src="assets/qr.png" alt="QR" />
+    </div>
+</div>
+<div class="modal_wrapper"></div>
+
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="scripts/jquery.js.js"></script>
@@ -540,5 +552,6 @@
 <script defer src="scripts/popover.js"></script>
 <script defer src="scripts/video.js"></script>
 <script defer src="scripts/accordion.js"></script>
+<script defer src="scripts/modal.js"></script>
 </body>
 </html>
