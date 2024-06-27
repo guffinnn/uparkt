@@ -16,14 +16,14 @@
 </head>
 <body>
 <!--HEADER-->
-<header class="header" id="home">
+<header class="header">
     <!--BURGER MENU BUTTON-->
     <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
     <label for="burger-checkbox" class="burger"></label>
     <!--LOGO-->
-    <div class="header_div_logo">
+    <a class="header_div_logo" href="#usp">
         <img class="div_img_logo" src="assets/logo.svg" alt="Логотип" />
-    </div>
+    </a>
     <!--LIST OF LINKS-->
     <nav class="header_nav">
         <ul class="nav_ul_list">
@@ -68,7 +68,7 @@
                     <!--QR_CODE-->
                     <div class="container_div_button black" id="qr">
                         <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
-                        <a href="#" class="button_text qr_code text white">Сканировать QR</a>
+                        <a href="#" class="button_text qr_code text white" id="qr-text">Сканировать QR</a>
                     </div>
                 </div>
             </li>
@@ -78,7 +78,7 @@
 <!--MAIN-->
 <main class="main" id="main">
     <!--SECTION FOR USP-->
-    <section class="main_section_usp">
+    <section class="main_section_usp" id="usp">
         <div class="usp_div_left">
             <div class="usp_text_frame">
                 <h1 class="h1_usp">
@@ -114,7 +114,7 @@
         </div>
         <div class="usp_div_right">
             <div class="iphone image_container">
-                <img class="iphone image" src="assets/iphone.svg" alt="Демонстрация" />
+                <img class="iphone image" src="assets/iphone.png" alt="Демонстрация" />
             </div>
             <div class="order_card image_container">
                 <img class="order_card image" src="assets/order-card.svg" alt="Карточка" />
@@ -410,13 +410,125 @@
         </div>
     </section>
     <!--SECTION FOR DOWNLOAD-->
-    <section class="main_section_download" data-section-id="download">
-        
+    <section class="main_section_download" id="download">
+        <div class="div_section_fluid">
+            <div class="download_content">
+                <div class="logo_market">
+                    <img class="logo_market image" src="assets/logo-market.svg" width="40px" height="auto" alt="" />
+                </div>
+                <h2 class="service_h2">Попробуйте Uparkt сегодня</h2>
+            </div>
+            <div class="dropdown" id="dropdown">
+                <!--BUTTON DROPDOWN-->
+                <label class="dropdown">
+                    <div class="dd-button">
+                        <div class="dropdown_default ios">
+                        <span class="dropdown_text ios">
+                            <a href="#">Скачать для iOS</a>
+                        </span>
+                        </div>
+                        <div class="dropdown_icon">
+                            <img class="dropdown_icon image" src="assets/dropdown-icon.svg" alt="Подробнее" />
+                        </div>
+                    </div>
+                    <input type="checkbox" class="dd-input">
+                    <ul class="dd-menu">
+                        <li>
+                            <div class="dropdown_default android">
+                            <span class="dropdown_text android">
+                                <a href="#">Скачать для Android</a>
+                            </span>
+                            </div>
+                        </li>
+                    </ul>
+                </label>
+            </div>
+        </div>
     </section>
 </main>
 <!--FOOTER-->
 <footer class="footer">
-
+    <div class="first_column">
+        <!--LOGO-->
+        <a class="header_div_logo footer" href="#usp">
+            <img class="div_img_logo" src="assets/logo.svg" alt="Логотип" />
+        </a>
+        <!--LIST OF LINKS-->
+        <nav class="footer_nav">
+            <ul class="nav_ul_list">
+                <li class="ul_li">
+                    <a href="" class="li_a_link text">Политика конфиденциальности</a>
+                </li>
+                <li class="ul_li">
+                    <a href="" class="li_a_link text">Пользовательское соглашение</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="second_column column">
+        <!--HEADING-->
+        <h4 class="h4_heading">Главное</h4>
+        <!--LIST OF LINKS-->
+        <nav class="footer_nav">
+            <ul class="nav_ul_list">
+                <li class="ul_li">
+                    <a href="#advantages" class="li_a_link text">Преимущества</a>
+                </li>
+                <li class="ul_li">
+                    <a href="#location" class="li_a_link text">Где мы работаем</a>
+                </li>
+                <li class="ul_li">
+                    <a href="#faq" class="li_a_link text">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="third_column column">
+        <!--HEADING-->
+        <h4 class="h4_heading">Полезное</h4>
+        <!--LIST OF LINKS-->
+        <nav class="footer_nav">
+            <ul class="nav_ul_list">
+                <li class="ul_li">
+                    <a href="#owners" class="li_a_link text">Владельцам парковок</a>
+                </li>
+                <li class="ul_li">
+                    <a href="#sponsors" class="li_a_link text">Нам доверяют</a>
+                </li>
+                <li class="ul_li">
+                    <a href="#form" class="li_a_link text">Связаться</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="fourth_column column">
+        <!--HEADING-->
+        <h4 class="h4_heading">Наш телеграм</h4>
+        <!--LIST OF LINKS-->
+        <nav class="footer_nav">
+            <ul class="nav_ul_list" id="images">
+                <li class="ul_li">
+                    <!--TELEGRAM LINK-->
+                    <a href="https://t.me/uparkt" class="li_a_link image">
+                        <img class="social_link" src="assets/tg.svg" alt="Telegram" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <p class="promo_text">SEARCH, BOOK, PARKT</p>
+    <!--HOST-->
+    <div class="container_div_button white">
+        <a href="#" class="button_text text black">Стать хостом</a>
+    </div>
+    <!--LOG IN-->
+    <div class="container_div_button black">
+        <a href="#" class="button_text text white">Войти</a>
+    </div>
+    <!--TO UP-->
+    <a class="arrow_to_up" href="#usp">
+        <img class="image" src="assets/arrow-to-header.svg" alt="Вверх" />
+    </a>
 </footer>
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
