@@ -363,7 +363,7 @@ a.li_a_link.text:hover {
 
 /*WHITE VARIANT (FOR HOVER)*/
 .container_div_button.black:hover {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0);
     border: 1px solid var(--gray-400);
 }
 
@@ -890,7 +890,7 @@ h1.h1_usp {
     gap: 10px;
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--font-size-16);
     line-height: 125%;
     text-align: start;
@@ -1505,7 +1505,7 @@ video.video_content {
     height: 34px;
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--font-size-13);
     line-height: 130%;
     letter-spacing: -0.01em;
@@ -1882,7 +1882,7 @@ textarea:focus {
     border-radius: 100px;
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: var(--font-size-16);
     line-height: 125%;
     text-align: center;
@@ -1901,7 +1901,7 @@ textarea:focus {
     color: var(--black);
 }
 
-input:invalid:focus {
+.error-message.invalid input:focus {
     color: var(--error-500);
 
     background: var(--light-gray);
@@ -2341,8 +2341,8 @@ footer.footer .container_div_button.black {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
     object-fit: contain;
 }
 
