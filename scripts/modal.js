@@ -3,6 +3,10 @@ $("#qr").click(function() {
     $("#myModal").addClass('open');
 });
 
+$("#qr-button").click(function() {
+    $("#myModal").addClass('open');
+});
+
 // При клике на крестик закрываем модальное окно
 $(".close").click(function() {
     $("#myModal").removeClass('open');

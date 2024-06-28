@@ -70,6 +70,10 @@
                         <img class="qr_code_mobile" src="assets/qr.svg" alt="QR-код" />
                         <a href="#" class="button_text qr_code text white" id="qr-text">Сканировать QR</a>
                     </div>
+                    <!--DOWNLOAD APP-->
+                    <a href="#" class="container_div_button black" id="app-download">
+                        <span class="button_text text white">Скачать приложение</span>
+                    </a>
                 </div>
             </li>
         </ul>
@@ -86,7 +90,7 @@
                     <span class="h1_usp__line">И бронирование</span>
                     <span class="h1_usp__line">В 2 КЛИКА</span>
                 </h1>
-                <p class="usp_p_content">Приложение для парковок, созданное чтобы облегчить и ускорить процесс паркинга</p>
+                <p class="usp_p_content">Приложение, созданное чтобы облегчить и ускорить процесс паркинга</p>
             </div>
             <!--BUTTON DROPDOWN-->
             <label class="dropdown">
@@ -97,7 +101,7 @@
                         </span>
                     </div>
                     <div class="dropdown_icon">
-                        <img class="dropdown_icon image" src="assets/dropdown-icon.svg" alt="Подробнее" />
+                        <img class="image" src="assets/dropdown-icon.svg" alt="Подробнее" />
                     </div>
                 </div>
                 <input type="checkbox" class="dd-input" id="test">
@@ -212,6 +216,23 @@
                 </figure>
             </div>
             <!--FRAME FOR SECURITY-->
+            <div class="main-section">
+                <article class="description">
+                    <h3 class="description_head">Безопасность</h3>
+                    <p class="description_content">Пользователи приложения могут выбирать парковки, рекомендованные нашими партнёрами, где обеспечен высокий уровень безопасности.</p>
+                </article>
+                <figure class="video">
+                    <video class="video_content"
+                           autoplay="autoplay"
+                           loop="loop"
+                           preload="auto"
+                           muted="muted"
+                    >
+                        <source src="assets/anim5.mp4" type="video/mp4">
+                    </video>
+                </figure>
+            </div>
+            <!--DON'T TOUCH THIS main-section-->
             <div class="main-section" id="last">
                 <article class="description">
                     <h3 class="description_head">Безопасность</h3>
@@ -254,11 +275,13 @@
                 <div class="advantage_image"></div>
                 <div class="advantage_content">
                     <h4 class="h4_heading">Выгодные условия
-                        <img src="assets/help-circle.svg" alt="" />
+                        <img src="assets/help-circle.svg" class="help_image" alt="" />
                     </h4>
                     <div class="popover">
-                        <p>Можете убедиться в этом сами - читать</p>
-                        <img src="assets/link-arrow.svg" alt="" />
+                        <p>Можете убедиться в этом сами - <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing">читать</a></p>
+                        <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing">
+                            <img src="assets/link-arrow.svg" alt="" />
+                        </a>
                     </div>
                     <span class="advantage_description">У нас одни из самых низких комиссий. Вывести средства легко и просто.</span>
                 </div>
@@ -275,7 +298,7 @@
             <!--BUTTON-->
             <div class="dropdown_default">
                 <span class="dropdown_text">
-                    <a href="#">Скачать приложение</a>
+                    <span id="qr-button">Скачать приложение</span>
                 </span>
             </div>
         </div>
@@ -361,11 +384,19 @@
             <!--FORM-->
             <div class="form_container">
                 <span class="location_description">Наш менеджер свяжется с вами, чтобы обсудить наилучшие условия для Вас или вашей компании.</span>
-                <form action="sendMessage.php" method="post">
-                    <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
-                    <input type="email" name="email" placeholder="Ваша почта" required>
-                    <input type="text" name="subject" placeholder="Ваша тема" required>
-                    <input type="text" name="message" placeholder="Ваше сообщение" required>
+                <form action="" method="post">
+                    <div class="error-message">
+                        <input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+                    </div>
+                    <div class="error-message">
+                        <input type="email" name="email" placeholder="Ваша почта" required>
+                    </div>
+                    <div class="error-message">
+                        <input type="text" name="subject" placeholder="Ваша тема" required>
+                    </div>
+                    <div class="error-message">
+                        <input type="text" name="message" placeholder="Ваше сообщение" required>
+                    </div>
                     <button type="submit" class="dropdown_default black">Отправить</button>
                 </form>
             </div>
@@ -428,7 +459,7 @@
                         </span>
                         </div>
                         <div class="dropdown_icon">
-                            <img class="dropdown_icon image" src="assets/dropdown-icon.svg" alt="Подробнее" />
+                            <img class="image" src="assets/dropdown-icon.svg" alt="Подробнее" />
                         </div>
                     </div>
                     <input type="checkbox" class="dd-input">
@@ -518,12 +549,20 @@
     </div>
     <p class="promo_text">SEARCH, BOOK, PARKT</p>
     <!--HOST-->
-    <a class="container_div_button white" href="https://admin.uparkt.ru/login">
+    <a class="container_div_button white" href="#owners" id="host">
         <span class="button_text text black">Стать хостом</span>
     </a>
+    <!--LOG IN 2-->
+    <a href="#" class="container_div_button white" id="log-in2">
+        <span class="button_text text black">Войти</span>
+    </a>
     <!--LOG IN-->
-    <a class="container_div_button black" href="#">
+    <a class="container_div_button black" href="https://admin.uparkt.ru/login" id="log-in">
         <span class="button_text text white">Войти</span>
+    </a>
+    <!--DOWNLOAD APP-->
+    <a href="#" class="container_div_button black" id="app-download2">
+        <span class="button_text text white">Скачать приложение</span>
     </a>
     <!--TO UP-->
     <a class="arrow_to_up" href="#usp">
@@ -544,7 +583,7 @@
 
 <!--JQUERY-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="scripts/jquery.js.js"></script>
+<script src="scripts/jquery.js"></script>
 <!--SCRIPTS-->
 <script defer src="scripts/script.js"></script>
 <script defer src="scripts/scroll.js"></script>
@@ -553,5 +592,6 @@
 <script defer src="scripts/video.js"></script>
 <script defer src="scripts/accordion.js"></script>
 <script defer src="scripts/modal.js"></script>
+<script defer src="scripts/form.js"></script>
 </body>
 </html>

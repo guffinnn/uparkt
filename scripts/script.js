@@ -28,7 +28,6 @@ $(document).ready(function() {
         });
     });
 
-    // Скрываем язык, который уже выбран при загрузке
     $('.language_dropdown_item[data_lang="' + currentLang + '"]').hide();
 
     // BURGER MENU
@@ -38,7 +37,16 @@ $(document).ready(function() {
     });
 
     // BUTTON DROPDOWN
-    $('.dropdown_icon').click(function() {
-        $(this).find('.dropdown_icon.image').toggleClass('open');
-    });
+    $('.dropdown_icon')
+        .hover(function() {
+            const currentSrc = $(this).find('.image').attr('src');
+            if (currentSrc.includes('assets/arrow-down-purple.svg')) {
+                $(this).find('.image').attr('src', 'assets/arrow-down.svg'); // Устанавливаем 'arrow-down.svg'
+            } else {
+                $(this).find('.image').attr('src', 'assets/arrow-down-purple.svg'); // Устанавливаем 'arrow-down-purple.svg'
+            }
+        })
+        .click(function() {
+            $(this).find('.image').toggleClass('open');
+        });
 });
