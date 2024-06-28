@@ -3011,7 +3011,7 @@ footer.footer .container_div_button.black {
         margin-bottom: 10px;
 
         top: 0;
-        left: 0;
+        left: -5px;
         transform: translate(0, 0);
 
         scale: 1;
@@ -3465,6 +3465,10 @@ footer.footer .container_div_button.black {
 
     .first_column .ul_li a {
         font-size: var(--font-size-12);
+    }
+
+    .footer_nav .ul_li {
+        gap: 8px;
     }
 
     .footer_nav .ul_li a {
