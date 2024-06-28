@@ -2229,12 +2229,13 @@ footer.footer .container_div_button.black {
     height: fit-content;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
 
     padding: 0;
-    gap: 0;
+    gap: 16px;
 }
 
 .footer_nav .ul_li a {
@@ -3010,7 +3011,7 @@ footer.footer .container_div_button.black {
         margin-bottom: 10px;
 
         top: 0;
-        left: 0;
+        left: -5px;
         transform: translate(0, 0);
 
         scale: 1;
@@ -3213,16 +3214,6 @@ footer.footer .container_div_button.black {
 
     .first_column .ul_li a {
         font-size: var(--font-size-13);
-    }
-
-    .footer_nav .li_a_link.image {
-        width: 56px;
-        height: 56px;
-    }
-
-    .footer_nav .li_a_link.image img {
-        width: 32px;
-        height: 32px;
     }
 
     .arrow_to_up {
