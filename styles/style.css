@@ -3459,6 +3459,10 @@ footer.footer .container_div_button.black {
         grid-row: 5;
     }
 
+    .footer_nav .ul_li {
+        gap: 8px;
+    }
+
     .first_column .ul_li a {
         font-size: var(--font-size-12);
     }
