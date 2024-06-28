@@ -280,6 +280,7 @@ main {
 
 #app-download,
 #app-download2,
+#app-download3,
 #log-in2 {
     display: none;
 }
@@ -3495,18 +3496,22 @@ footer.footer .container_div_button.black {
         z-index: -1;
     }
 
-    #qr, #host {
+    #qr,
+    #host,
+    #download1 {
         display: none;
     }
 
     #app-download,
     #app-download2,
+    #app-download3,
     #log-in2 {
         display: block;
     }
 
     #app-download .text,
     #app-download2 .text,
+    #app-download3 .text,
     #log-in2 .text {
         align-items: center;
         justify-content: center;

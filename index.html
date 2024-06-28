@@ -21,20 +21,20 @@
     <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
     <label for="burger-checkbox" class="burger"></label>
     <!--LOGO-->
-    <a class="header_div_logo" href="#usp">
+    <a class="header_div_logo" href="#usp" target="_self">
         <img class="div_img_logo" src="assets/logo.svg" alt="Логотип" />
     </a>
     <!--LIST OF LINKS-->
     <nav class="header_nav">
         <ul class="nav_ul_list">
             <li class="ul_li">
-                <a href="#advantages" class="li_a_link text">Преимущества</a>
+                <a href="#advantages" class="li_a_link text" target="_self">Преимущества</a>
             </li>
             <li class="ul_li">
-                <a href="#location" class="li_a_link text">Где мы работаем</a>
+                <a href="#location" class="li_a_link text" target="_self">Где мы работаем</a>
             </li>
             <li class="ul_li">
-                <a href="#faq" class="li_a_link text">FAQ</a>
+                <a href="#faq" class="li_a_link text" target="_self">FAQ</a>
             </li>
             <li class="ul_li" id="buttons">
                 <!--BUTTONS-->
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <!--LOG IN-->
-                    <a class="container_div_button white" href="https://admin.uparkt.ru/login">
+                    <a class="container_div_button white" href="https://admin.uparkt.ru/login" target="_blank">
                         <span class="button_text text black">Войти</span>
                     </a>
                     <!--QR_CODE-->
@@ -71,7 +71,7 @@
                         <a href="#" class="button_text qr_code text white" id="qr-text">Сканировать QR</a>
                     </div>
                     <!--DOWNLOAD APP-->
-                    <a href="#" class="container_div_button black" id="app-download">
+                    <a href="#" class="container_div_button black" id="app-download" target="_blank">
                         <span class="button_text text white">Скачать приложение</span>
                     </a>
                 </div>
@@ -97,7 +97,7 @@
                 <div class="dd-button">
                     <div class="dropdown_default ios">
                         <span class="dropdown_text ios">
-                            <a href="#">Скачать для iOS</a>
+                            <a href="#" target="_blank">Скачать для iOS</a>
                         </span>
                     </div>
                     <div class="dropdown_icon">
@@ -109,7 +109,7 @@
                     <li>
                         <div class="dropdown_default android">
                             <span class="dropdown_text android">
-                                <a href="#">Скачать для Android</a>
+                                <a href="#" target="_blank">Скачать для Android</a>
                             </span>
                         </div>
                     </li>
@@ -278,8 +278,8 @@
                         <img src="assets/help-circle.svg" class="help_image" alt="" />
                     </h4>
                     <div class="popover">
-                        <p>Можете убедиться в этом сами - <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing">читать</a></p>
-                        <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing">
+                        <p>Можете убедиться в этом сами - <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing" target="_blank">читать</a></p>
+                        <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing" target="_blank">
                             <img src="assets/link-arrow.svg" alt="" />
                         </a>
                     </div>
@@ -296,11 +296,17 @@
                 </div>
             </div>
             <!--BUTTON-->
-            <div class="dropdown_default">
+            <div class="dropdown_default" id="download1">
                 <span class="dropdown_text">
                     <span id="qr-button">Скачать приложение</span>
                 </span>
             </div>
+            <!--DOWNLOAD APP 3-->
+            <a href="#" class="dropdown_default" id="app-download3" target="_blank">
+                <span class="dropdown_text">
+                    <span>Скачать приложение</span>
+                </span>
+            </a>
         </div>
     </section>
     <!--SECTION FOR OWNERS (SECOND)-->
@@ -455,7 +461,7 @@
                     <div class="dd-button">
                         <div class="dropdown_default ios">
                         <span class="dropdown_text ios">
-                            <a href="#">Скачать для iOS</a>
+                            <a href="#" target="_blank">Скачать для iOS</a>
                         </span>
                         </div>
                         <div class="dropdown_icon">
@@ -467,7 +473,7 @@
                         <li>
                             <div class="dropdown_default android">
                             <span class="dropdown_text android">
-                                <a href="#">Скачать для Android</a>
+                                <a href="#" target="_blank">Скачать для Android</a>
                             </span>
                             </div>
                         </li>
@@ -481,17 +487,17 @@
 <footer class="footer">
     <div class="first_column">
         <!--LOGO-->
-        <a class="header_div_logo footer" href="#usp">
+        <a class="header_div_logo footer" href="#usp" target="_self">
             <img class="div_img_logo" src="assets/logo.svg" alt="Логотип" />
         </a>
         <!--LIST OF LINKS-->
         <nav class="footer_nav">
             <ul class="nav_ul_list">
                 <li class="ul_li">
-                    <a href="http://uparkt.online/" class="li_a_link text">Политика конфиденциальности</a>
+                    <a href="http://uparkt.online/" class="li_a_link text" target="_blank">Политика конфиденциальности</a>
                 </li>
                 <li class="ul_li">
-                    <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing" class="li_a_link text">Пользовательское соглашение</a>
+                    <a href="https://drive.google.com/file/d/1kTjapnK-txmiFK7UIFTI1mdpWPaCxzgu/view?usp=sharing" class="li_a_link text" target="_blank">Пользовательское соглашение</a>
                 </li>
             </ul>
         </nav>
@@ -503,13 +509,13 @@
         <nav class="footer_nav">
             <ul class="nav_ul_list">
                 <li class="ul_li">
-                    <a href="#advantages" class="li_a_link text">Преимущества</a>
+                    <a href="#advantages" class="li_a_link text" target="_self">Преимущества</a>
                 </li>
                 <li class="ul_li">
-                    <a href="#location" class="li_a_link text">Где мы работаем</a>
+                    <a href="#location" class="li_a_link text" target="_self">Где мы работаем</a>
                 </li>
                 <li class="ul_li">
-                    <a href="#faq" class="li_a_link text">FAQ</a>
+                    <a href="#faq" class="li_a_link text" target="_self">FAQ</a>
                 </li>
             </ul>
         </nav>
@@ -521,13 +527,13 @@
         <nav class="footer_nav">
             <ul class="nav_ul_list">
                 <li class="ul_li">
-                    <a href="#owners" class="li_a_link text">Владельцам парковок</a>
+                    <a href="#owners" class="li_a_link text" target="_self">Владельцам парковок</a>
                 </li>
                 <li class="ul_li">
-                    <a href="#sponsors" class="li_a_link text">Нам доверяют</a>
+                    <a href="#sponsors" class="li_a_link text" target="_self">Нам доверяют</a>
                 </li>
                 <li class="ul_li">
-                    <a href="#form" class="li_a_link text">Связаться</a>
+                    <a href="#form" class="li_a_link text" target="_self">Связаться</a>
                 </li>
             </ul>
         </nav>
@@ -540,7 +546,7 @@
             <ul class="nav_ul_list" id="images">
                 <li class="ul_li">
                     <!--TELEGRAM LINK-->
-                    <a href="https://t.me/uparktrus" class="li_a_link image">
+                    <a href="https://t.me/uparktrus" class="li_a_link image" target="_blank">
                         <img class="social_link" src="assets/tg.svg" alt="Telegram" />
                     </a>
                 </li>
@@ -549,23 +555,23 @@
     </div>
     <p class="promo_text">SEARCH, BOOK, PARKT</p>
     <!--HOST-->
-    <a class="container_div_button white" href="#owners" id="host">
+    <a class="container_div_button white" href="#owners" id="host" target="_self">
         <span class="button_text text black">Стать хостом</span>
     </a>
     <!--LOG IN 2-->
-    <a href="#" class="container_div_button white" id="log-in2">
+    <a href="#" class="container_div_button white" id="log-in2" target="_blank">
         <span class="button_text text black">Войти</span>
     </a>
     <!--LOG IN-->
-    <a class="container_div_button black" href="https://admin.uparkt.ru/login" id="log-in">
+    <a class="container_div_button black" href="https://admin.uparkt.ru/login" id="log-in" target="_blank">
         <span class="button_text text white">Войти</span>
     </a>
     <!--DOWNLOAD APP-->
-    <a href="#" class="container_div_button black" id="app-download2">
+    <a href="#" class="container_div_button black" id="app-download2" target="_blank">
         <span class="button_text text white">Скачать приложение</span>
     </a>
     <!--TO UP-->
-    <a class="arrow_to_up" href="#usp">
+    <a class="arrow_to_up" href="#usp" target="_self">
         <img class="image" src="assets/arrow-to-header.svg" alt="Вверх" />
     </a>
 </footer>
