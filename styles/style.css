@@ -2516,6 +2516,11 @@ footer.footer .container_div_button.black {
         grid-column: 1;
         grid-row: 3;
     }
+
+    .main_section_download .div_section_fluid {
+        background: url(../assets/grid-violet-tablet.svg) no-repeat center center, var(--light-gray);
+        background-size: cover;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -3367,7 +3372,7 @@ footer.footer .container_div_button.black {
         border: 1px solid var(--gray-300);
         border-radius: 16px;
 
-        background: url(../assets/grid-violet-small.svg) no-repeat center center, var(--light-gray);
+        background: url(../assets/grid-violet-small.svg) no-repeat center center, var(--white);
         background-size: cover;
     }
 
