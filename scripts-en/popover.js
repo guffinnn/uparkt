@@ -15,6 +15,7 @@ $(document).ready(function() {
     // Оставляем tooltip видимым, пока курсор над ним
     $('.popover').hover(function () {
         $(this).addClass('open');
+        $('.h4_heading .help_image').attr('src', '../assets/help-circle-purple.svg');
     }, function () {
         // Скрываем tooltip, когда курсор уходит с него и не наведен на кнопку
         $(this).closest('.advantage_content').find('.help_image').mouseout(function () {
