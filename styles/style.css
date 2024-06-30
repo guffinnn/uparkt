@@ -1749,41 +1749,13 @@ video.video_content {
     flex-grow: 0;
 }
 
-.sponsor_image {
+.default_image {
+    display: block !important;
     width: 100%;
     height: auto;
     min-height: 25px;
 
-    background-size: contain;
-    image-rendering: crisp-edges;
-
-    background: url(../assets/slack.png) no-repeat center center;
-    background-size: contain;
-}
-
-#spnsr1 {
-    background: url(../assets/uber.png) no-repeat center center;
-    background-size: contain;
-}
-
-#spnsr2 {
-    background: url(../assets/google.png) no-repeat center center;
-    background-size: contain;
-}
-
-#spnsr3 {
-    background: url(../assets/spotify.png) no-repeat center center;
-    background-size: contain;
-}
-
-#spnsr4 {
-    background: url(../assets/amazon.png) no-repeat center center;
-    background-size: contain;
-}
-
-#spnsr5 {
-    background: url(../assets/figma.png) no-repeat center center;
-    background-size: contain;
+    object-fit: contain;
 }
 
 /*SECTION FOR FORM*/
@@ -2078,7 +2050,7 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 0 127px 0;
+    padding: 127px 0;
     gap: 24px;
     border-radius: 40px;
 
@@ -3544,4 +3516,151 @@ footer.footer .container_div_button.black {
 /*MOBILE*/
 @media(max-width: 390px) {
 
+}
+
+@media (hover: none), (pointer: coarse) {
+    a.li_a_link.text:hover,
+    a.li_a_link.text:focus {
+        color: var(--black);
+    }
+
+    a.li_a_link.text:active {
+        color: var(--violet);
+        transition: none;
+    }
+
+    /*WHITE (DEFAULT)*/
+    .container_div_button.white:hover,
+    .container_div_button.white:focus {
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid var(--gray-300);
+    }
+
+    .container_div_button.white:hover .button_text.black,
+    .container_div_button.white:focus .button_text.black {
+        color: var(--black);
+    }
+
+    /*(FOR FOCUS)*/
+    .container_div_button.white:active {
+        background: rgba(255, 255, 255, 0);
+        border-color: var(--gray-300);
+        transition: none;
+    }
+
+    .container_div_button.white:active .button_text.black {
+        color: var(--gray-400);
+        transition: none;
+    }
+
+    /*BLACK (DEFAULT)*/
+    .container_div_button.black:hover,
+    .container_div_button.black:focus {
+        background: var(--black);
+        border: 1px solid var(--black);
+    }
+
+    .container_div_button.black:hover .button_text.white,
+    .container_div_button.black:focus .button_text.white {
+        color: var(--white);
+    }
+
+    /*(FOR FOCUS)*/
+    .container_div_button.black:active {
+        background: var(--light-gray);
+        border-color: var(--light-gray);
+        transition: none;
+    }
+
+    .container_div_button.black:active .button_text.white {
+        color: var(--black);
+        transition: none;
+    }
+
+    /*QR (DEFAULT)*/
+    .container_div_button:hover .qr_code:before,
+    .container_div_button:focus .qr_code:before {
+        content: url(../assets/qr.svg);
+    }
+
+    /*QR (FOR FOCUS)*/
+    .container_div_button:active .qr_code:before {
+        content: url(../assets/qr-black.svg);
+        transition: none;
+    }
+
+    .dropdown_default:focus {
+        background: var(--violet);
+    }
+
+    .dropdown_default:focus span,
+    .dropdown_default:focus span a {
+        color: var(--white);
+    }
+
+    .dropdown_default:active {
+        background: var(--pure-violet);
+        transition: none;
+    }
+
+    .dropdown_default:active span,
+    .dropdown_default:active span a {
+        color: var(--violet);
+        transition: none;
+    }
+
+    .dropdown_icon:focus {
+        background: var(--violet);
+    }
+
+    .dropdown_icon:active {
+        background: var(--pure-violet);
+        transition: background 0.45s ease-in-out;
+    }
+
+    .dropdown_default.ios:focus span:before {
+        content: url(../assets/apple-icon.svg);
+    }
+
+    .dropdown_default.android:focus span:before {
+        content: url(../assets/android-icon.svg);
+    }
+
+    .dropdown_default.ios:active span:before {
+        content: url(../assets/apple-icon-purple.svg);
+        transition: none;
+    }
+
+    .dropdown_default.android:active span:before {
+        content: url(../assets/android-icon-purple.svg);
+        transition: none;
+    }
+
+    input:hover,
+    textarea:hover,
+    input:active,
+    textarea:active {
+        background: var(--light-gray);
+        border-radius: 16px;
+        border: 1px solid var(--white);
+    }
+
+    input:focus,
+    textarea:focus {
+        background: var(--white);
+        border: 1px solid var(--gray-300);
+        border-radius: 16px;
+    }
+
+    .dropdown_default.black:hover,
+    .dropdown_default.black:focus {
+        background: var(--black);
+        color: var(--white);
+    }
+
+    .dropdown_default.black:active {
+        background: var(--light-gray);
+        color: var(--black);
+        transition: none;
+    }
 }

@@ -45,8 +45,24 @@ $(document).ready(function() {
             } else {
                 $(this).find('.image').attr('src', 'assets/arrow-down-purple.svg');
             }
+
+            if (window.innerWidth < 600) {
+                $(this).find('.image').attr('src', 'assets/arrow-down.svg');
+            }
         })
         .click(function() {
             $(this).find('.image').toggleClass('open');
+
+            // Проверяем, меньше ли ширина экрана 600px
+            if (window.innerWidth < 600) {
+                $(this).css('background', 'var(--pure-violet)');
+                $(this).find('.image').attr('src', 'assets/arrow-down-purple.svg');
+
+                // Возвращаем цвет в исходное состояние через 0.45 секунды
+                setTimeout(() => {
+                    $(this).css('background', 'var(--violet)');
+                    $(this).find('.image').attr('src', 'assets/arrow-down.svg');
+                }, 450);
+            }
         });
 });
