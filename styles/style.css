@@ -547,6 +547,7 @@ a.li_a_link.text:hover {
     }
 
     .burger-checkbox:checked ~ .header_nav {
+        height: 100%;
         opacity: 1;
         scale: 1;
         transform: translateY(0);
@@ -3073,7 +3074,7 @@ footer.footer .container_div_button.black {
 
     .nav_ul_list {
         width: 100%;
-        height: calc(100vh - 100px);
+        height: 100%;
         display: grid;
         justify-items: start;
         grid-template-rows: repeat(4, auto) repeat(1, 1fr);
