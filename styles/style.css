@@ -480,7 +480,7 @@ a.li_a_link.text:hover {
 
     /* Стили для header при отмеченном бургере */
     header.header.open {
-        height: 100vh !important;
+        height: 100% !important;
         background: var(--white);
     }
 
@@ -535,7 +535,7 @@ a.li_a_link.text:hover {
         width: 100%;
         opacity: 0;
         scale: 0;
-        transform: translateY(-100vh);
+        transform: translateY(-100%);
 
         background-color: rgba(255, 255, 255, 0);
 
